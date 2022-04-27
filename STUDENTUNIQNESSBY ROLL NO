@@ -1,0 +1,40 @@
+import java.util.HashSet;
+class Student{
+    int rNumber;
+    String name;
+    public Student(int rNumber,String name){
+        this.rNumber=rNumber;
+        this.name=name;
+    }
+    @Override
+    public int hashCode() {
+        return rNumber;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        Student student=(Student) obj;
+        return(rNumber==student.rNumber);
+    }
+    @Override
+    public String toString() {
+        return rNumber+","+name;
+    }
+    
+}
+class Studenthashset{
+    
+    public static void main(String[] args){
+        HashSet<Student> set=new HashSet<Student>();
+        set.add(new Student(101, "Abhay"));
+        set.add(new Student(102, "bhanu"));
+        set.add(new Student(101, "chirag"));
+        set.add(new Student(103, "sanjay"));
+        set.add(new Student(101, "abhinav"));
+        set.add(new Student(104, "akshay"));
+        set.add(new Student(101, "Abhinay"));
+        set.add(new Student(105, "Ajay"));
+        set.add(new Student(106, "Akash"));
+        for(Student s:set)
+            System.out.println(s);
+    }
+}
