@@ -1,0 +1,21 @@
+import java.util.*;
+public class sortlistset {
+    public static void main(String[] args){
+        List<Integer> list=new ArrayList<Integer>();
+        List<Integer> list1=new ArrayList<Integer>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list1.add(5);
+        list1.add(9);
+        list1.add(8);
+        List<Integer> concatenatelistnew=new ArrayList<Integer>(list);
+        concatenatelistnew.addAll(list1);
+        Set<Integer> set=new HashSet<Integer>();
+        for(Integer i:concatenatelistnew)
+            set.add(i);
+        for(Integer j:set)
+            System.out.println(j);
+    }
+}
