@@ -1,0 +1,19 @@
+import java.util.*;
+public class listset {
+    public static void main(String[] args){
+        List<Integer> list=new  LinkedList<Integer>();
+        Set<Integer> set=new HashSet<Integer>();
+        set.add(1);
+        set.add(2);
+        set.add(3);
+        set.add(4);
+        set.add(4);
+        System.out.println(set);
+        
+        for(Integer i:set)
+            list.add(i);
+        System.out.print("List created\n");
+        for(Integer j:list)
+            System.out.println(j+"\t");
+        }
+}
